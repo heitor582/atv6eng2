@@ -1,0 +1,115 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -------------------< com.biblioteca:biblioteca-web >--------------------
+[INFO] Building biblioteca-web 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ biblioteca-web ---
+[INFO] Copying 1 resource from src/main/resources to target/classes
+[INFO] Copying 0 resource from src/main/resources to target/classes
+[INFO] 
+[INFO] --- compiler:3.11.0:compile (default-compile) @ biblioteca-web ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ biblioteca-web ---
+[INFO] Copying 1 resource from src/test/resources to target/test-classes
+[INFO] 
+[INFO] --- compiler:3.11.0:testCompile (default-testCompile) @ biblioteca-web ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- surefire:3.1.2:test (default-test) @ biblioteca-web ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.biblioteca.LivroControllerTest
+08:03:19.829 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.biblioteca.LivroControllerTest]: LivroControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+08:03:19.893 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.biblioteca.BibliotecaApplication for test class com.biblioteca.LivroControllerTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::               (v3.2.12)
+
+2026-11-19T08:03:20.102-03:00  INFO 5533 --- [           main] com.biblioteca.LivroControllerTest       : Starting LivroControllerTest using Java 17.0.21.1 with PID 5533 (started by heitorvieira in /Users/heitorvieira/Desktop/cctrab/eng2/atv6eng2/backend)
+2026-11-19T08:03:20.103-03:00  INFO 5533 --- [           main] com.biblioteca.LivroControllerTest       : No active profile set, falling back to 1 default profile: "default"
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+2026-11-19T08:03:21.232-03:00  INFO 5533 --- [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-11-19T08:03:21.232-03:00  INFO 5533 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-11-19T08:03:21.233-03:00  INFO 5533 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2026-11-19T08:03:21.244-03:00  INFO 5533 --- [           main] com.biblioteca.LivroControllerTest       : Started LivroControllerTest in 1.309 seconds (process running for 1.875)
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.634 s -- in com.biblioteca.LivroControllerTest
+[INFO] Running com.biblioteca.ExtrasIntegracaoTest
+2026-11-19T08:03:21.373-03:00  INFO 5533 --- [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.biblioteca.ExtrasIntegracaoTest]: ExtrasIntegracaoTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-11-19T08:03:21.376-03:00  INFO 5533 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.biblioteca.BibliotecaApplication for test class com.biblioteca.ExtrasIntegracaoTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::               (v3.2.12)
+
+2026-11-19T08:03:21.397-03:00  INFO 5533 --- [           main] com.biblioteca.ExtrasIntegracaoTest      : Starting ExtrasIntegracaoTest using Java 17.0.21.1 with PID 5533 (started by heitorvieira in /Users/heitorvieira/Desktop/cctrab/eng2/atv6eng2/backend)
+2026-11-19T08:03:21.397-03:00  INFO 5533 --- [           main] com.biblioteca.ExtrasIntegracaoTest      : The following 1 profile is active: "test"
+2026-11-19T08:03:21.493-03:00  INFO 5533 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-11-19T08:03:21.505-03:00  INFO 5533 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 9 ms. Found 2 JPA repository interfaces.
+2026-11-19T08:03:21.596-03:00  INFO 5533 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-11-19T08:03:21.623-03:00  INFO 5533 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.10.Final
+2026-11-19T08:03:21.647-03:00  INFO 5533 --- [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-11-19T08:03:21.692-03:00  INFO 5533 --- [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-11-19T08:03:21.705-03:00  INFO 5533 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-11-19T08:03:21.784-03:00  INFO 5533 --- [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:biblioteca user=SA
+2026-11-19T08:03:21.785-03:00  INFO 5533 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-11-19T08:03:22.095-03:00  INFO 5533 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-11-19T08:03:22.116-03:00  INFO 5533 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-11-19T08:03:22.351-03:00  INFO 5533 --- [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-11-19T08:03:22.351-03:00  INFO 5533 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-11-19T08:03:22.351-03:00  INFO 5533 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2026-11-19T08:03:22.358-03:00  INFO 5533 --- [           main] com.biblioteca.ExtrasIntegracaoTest      : Started ExtrasIntegracaoTest in 0.977 seconds (process running for 2.989)
+2026-11-19T08:03:22.628-03:00  WARN 5533 --- [           main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 23503, SQLState: 23503
+2026-11-19T08:03:22.628-03:00 ERROR 5533 --- [           main] o.h.engine.jdbc.spi.SqlExceptionHelper   : Referential integrity constraint violation: "FKMJVS91L0CQTG1HY9KFJ3B40FY: PUBLIC.LIVROS FOREIGN KEY(AUTOR_ID) REFERENCES PUBLIC.AUTORES(ID) (CAST(2 AS BIGINT))"; SQL statement:
+delete from autores where id=? [23503-224]
+2026-11-19T08:03:22.736-03:00  WARN 5533 --- [           main] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<com.biblioteca.model.Autor> com.biblioteca.controller.AutorController.criar(com.biblioteca.model.Autor): [Field error in object 'autor' on field 'nome': rejected value [ ]; codes [NotBlank.autor.nome,NotBlank.nome,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [autor.nome,nome]; arguments []; default message [nome]]; default message [must not be blank]] ]
+2026-11-19T08:03:22.738-03:00  WARN 5533 --- [           main] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<com.biblioteca.model.Livro> com.biblioteca.controller.LivroController.criar(com.biblioteca.model.Livro): [Field error in object 'livro' on field 'autor': rejected value [null]; codes [NotNull.livro.autor,NotNull.autor,NotNull.com.biblioteca.model.Autor,NotNull]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [livro.autor,autor]; arguments []; default message [autor]]; default message [must not be null]] ]
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.370 s -- in com.biblioteca.ExtrasIntegracaoTest
+[INFO] Running com.biblioteca.AutorControllerTest
+2026-11-19T08:03:22.743-03:00  INFO 5533 --- [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.biblioteca.AutorControllerTest]: AutorControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-11-19T08:03:22.756-03:00  INFO 5533 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.biblioteca.BibliotecaApplication for test class com.biblioteca.AutorControllerTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::               (v3.2.12)
+
+2026-11-19T08:03:22.766-03:00  INFO 5533 --- [           main] com.biblioteca.AutorControllerTest       : Starting AutorControllerTest using Java 17.0.21.1 with PID 5533 (started by heitorvieira in /Users/heitorvieira/Desktop/cctrab/eng2/atv6eng2/backend)
+2026-11-19T08:03:22.766-03:00  INFO 5533 --- [           main] com.biblioteca.AutorControllerTest       : No active profile set, falling back to 1 default profile: "default"
+2026-11-19T08:03:22.855-03:00  INFO 5533 --- [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-11-19T08:03:22.856-03:00  INFO 5533 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-11-19T08:03:22.856-03:00  INFO 5533 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2026-11-19T08:03:22.859-03:00  INFO 5533 --- [           main] com.biblioteca.AutorControllerTest       : Started AutorControllerTest in 0.102 seconds (process running for 3.49)
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.132 s -- in com.biblioteca.AutorControllerTest
+[INFO] Running com.biblioteca.IntegracaoTest
+2026-11-19T08:03:22.877-03:00  INFO 5533 --- [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.biblioteca.IntegracaoTest]: IntegracaoTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-11-19T08:03:22.879-03:00  INFO 5533 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.biblioteca.BibliotecaApplication for test class com.biblioteca.IntegracaoTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.016 s -- in com.biblioteca.IntegracaoTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 9, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  4.501 s
+[INFO] Finished at: 2026-11-19T08:03:22-03:00
+[INFO] ------------------------------------------------------------------------

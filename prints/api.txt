@@ -1,0 +1,29 @@
+POST /api/autores
+{"nome": "Machado de Assis", "nacionalidade": "Brasileira", "dataNascimento": "1839-06-21"}
+HTTP 201
+{
+  "id": 1,
+  "nome": "Machado de Assis",
+  "nacionalidade": "Brasileira",
+  "dataNascimento": "1839-06-21",
+  "criadoEm": "2026-11-19T08:04:58.909982"
+}
+
+POST /api/livros
+{"titulo": "Dom Casmurro", "isbn": "978-8535910667", "anoPublicacao": 1899, "genero": "Romance", "autor": {"id": 1}}
+HTTP 201
+{
+  "id": 1,
+  "titulo": "Dom Casmurro",
+  "isbn": "978-8535910667",
+  "anoPublicacao": 1899,
+  "genero": "Romance",
+  "autor": {
+    "id": 1,
+    "nome": "Machado de Assis",
+    "nacionalidade": "Brasileira",
+    "dataNascimento": "1839-06-20",
+    "criadoEm": "2026-11-19T08:04:58.909982"
+  },
+  "criadoEm": "2026-11-19T08:04:58.951791"
+}

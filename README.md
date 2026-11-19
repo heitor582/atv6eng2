@@ -20,7 +20,7 @@ Sistema acadêmico para cadastrar autores e livros. Um autor pode escrever vári
 | `feature/livros` — DEV 2 | Entidade e repository de Livro, CRUD REST, testes unitários e integração, telas de Livros, rotas compartilhadas, Docker, CI e documentação |
 | `feature/extras` | Melhorias opcionais sobre os obrigatórios completos |
 
-Preencher os nomes dos integrantes antes da entrega. As branches obrigatórias são integradas à `main` por merges locais; a segunda parte usa a primeira como base porque Livro depende de Autor. A branch de extras parte da `main` completa.
+Dupla: **Gustavo Lopes Oliveira e Heitor Canhestro Vieira Moreira** (mesma da atividade 5). As branches obrigatórias são integradas à `main` por merges locais; a segunda parte usa a primeira como base porque Livro depende de Autor. A branch de extras parte da `main` completa.
 
 ## Estrutura
 
@@ -120,7 +120,11 @@ curl -i -X POST http://localhost:8080/api/livros \
 
 ## GitHub e evidências da entrega
 
-O projeto local não cria revisões fictícias nem simula execução do GitHub Actions. Ainda é necessário configurar o remoto da dupla e registrar no GitHub os PRs com revisão real do colega. Como os obrigatórios já foram integrados localmente, organize os PRs no remoto antes de publicar a `main` final: publique primeiro o commit inicial como `main`, abra/mescle Autores e depois Livros. Depois sincronize a main local com o histórico do remoto, conforme a estratégia de merge escolhida.
+### Justificativa para a ausência de Pull Requests e reviews formais
+
+A dupla **Gustavo Lopes Oliveira e Heitor Canhestro Vieira Moreira** realizou a atividade em **pair programming**, alternando os papéis de **driver** (responsável pela implementação) e **navigator** (responsável pelo acompanhamento e revisão em tempo real). As decisões e a revisão do código foram feitas em conjunto durante o desenvolvimento, em vez de ocorrerem por Pull Requests e comentários de revisão no GitHub.
+
+Por esse motivo, não foram registrados PRs e reviews formais. Apresentamos essa forma de colaboração como justificativa à avaliação do professor, reconhecendo que ela difere do fluxo de branches, PRs e revisão documentada exigido no enunciado.
 
 Entregar:
 

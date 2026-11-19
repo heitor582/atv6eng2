@@ -1,0 +1,30 @@
+<!doctype html><meta charset="utf-8"><title>API — criação e vínculo</title><style>body{margin:40px;background:#101b2c;color:#e7edf7;font:17px system-ui}h1{font-size:26px}p{color:#9fc7de}pre{background:#17263b;padding:24px;border-radius:12px;font:15px/1.6 monospace;white-space:pre-wrap}</style><h1>API — criação e vínculo</h1><p>Respostas reais de POST /api/autores e POST /api/livros · H2 em memória</p><pre>POST /api/autores
+{&quot;nome&quot;: &quot;Machado de Assis&quot;, &quot;nacionalidade&quot;: &quot;Brasileira&quot;, &quot;dataNascimento&quot;: &quot;1839-06-21&quot;}
+HTTP 201
+{
+  &quot;id&quot;: 1,
+  &quot;nome&quot;: &quot;Machado de Assis&quot;,
+  &quot;nacionalidade&quot;: &quot;Brasileira&quot;,
+  &quot;dataNascimento&quot;: &quot;1839-06-21&quot;,
+  &quot;criadoEm&quot;: &quot;2026-11-19T08:04:58.909982&quot;
+}
+
+POST /api/livros
+{&quot;titulo&quot;: &quot;Dom Casmurro&quot;, &quot;isbn&quot;: &quot;978-8535910667&quot;, &quot;anoPublicacao&quot;: 1899, &quot;genero&quot;: &quot;Romance&quot;, &quot;autor&quot;: {&quot;id&quot;: 1}}
+HTTP 201
+{
+  &quot;id&quot;: 1,
+  &quot;titulo&quot;: &quot;Dom Casmurro&quot;,
+  &quot;isbn&quot;: &quot;978-8535910667&quot;,
+  &quot;anoPublicacao&quot;: 1899,
+  &quot;genero&quot;: &quot;Romance&quot;,
+  &quot;autor&quot;: {
+    &quot;id&quot;: 1,
+    &quot;nome&quot;: &quot;Machado de Assis&quot;,
+    &quot;nacionalidade&quot;: &quot;Brasileira&quot;,
+    &quot;dataNascimento&quot;: &quot;1839-06-20&quot;,
+    &quot;criadoEm&quot;: &quot;2026-11-19T08:04:58.909982&quot;
+  },
+  &quot;criadoEm&quot;: &quot;2026-11-19T08:04:58.951791&quot;
+}
+</pre>
