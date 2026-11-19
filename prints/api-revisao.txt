@@ -1,0 +1,18 @@
+POST http://127.0.0.1:3000/api/autores
+HTTP 201
+{"id":1,"nome":"Machado de Assis","nacionalidade":"Brasileira","dataNascimento":"1839-06-21","criadoEm":"2026-11-19T08:20:46.830297"}
+
+GET http://127.0.0.1:3000/api/autores/1
+HTTP 200
+{"id":1,"nome":"Machado de Assis","nacionalidade":"Brasileira","dataNascimento":"1839-06-21","criadoEm":"2026-11-19T08:20:46.830297"}
+
+POST http://127.0.0.1:3000/api/livros
+HTTP 201
+{"id":1,"titulo":"Dom Casmurro","isbn":"978-8535910667","anoPublicacao":1899,"genero":"Romance","autor":{"id":1,"nome":"Machado de Assis","nacionalidade":"Brasileira","dataNascimento":"1839-06-21","criadoEm":"2026-11-19T08:20:46.830297"},"criadoEm":"2026-11-19T08:20:46.878668"}
+
+DELETE http://127.0.0.1:3000/api/livros/1
+HTTP 200
+
+
+DELETE http://127.0.0.1:3000/api/autores/1
+HTTP 200

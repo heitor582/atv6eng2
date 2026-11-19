@@ -14,13 +14,13 @@ Sistema acadêmico para cadastrar autores e livros. Um autor pode escrever vári
 
 ## Divisão do trabalho
 
-| Branch | Responsabilidade |
+| Área | Trabalho realizado pela dupla |
 | --- | --- |
-| `feature/autores` — DEV 1 | Estrutura, configurações PostgreSQL/H2, entidade e repository de Autor, CRUD REST, testes unitários e telas de Autores |
-| `feature/livros` — DEV 2 | Entidade e repository de Livro, CRUD REST, testes unitários e integração, telas de Livros, rotas compartilhadas, Docker, CI e documentação |
-| `feature/extras` | Melhorias opcionais sobre os obrigatórios completos |
+| Autores | Estrutura, banco, entidade, repository, CRUD, testes e telas de Autores |
+| Livros | Entidade, repository, CRUD, testes de integração e telas com seleção de autor |
+| Arquivos comuns e extras | Rotas, serviços HTTP, Docker, CI, documentação, filtro e tratamento de conflitos |
 
-Dupla: **Gustavo Lopes Oliveira e Heitor Canhestro Vieira Moreira** (mesma da atividade 5). As branches obrigatórias são integradas à `main` por merges locais; a segunda parte usa a primeira como base porque Livro depende de Autor. A branch de extras parte da `main` completa.
+Dupla: **Gustavo Lopes Oliveira e Heitor Canhestro Vieira Moreira** (mesma da atividade 5). Ambos trabalharam em pair programming, alternando implementação e revisão em tempo real. A entrega atual está consolidada na `main`. O histórico original foi removido durante a reorganização; as branches `feature/autores`, `feature/livros` e `feature/extras` não fazem parte do histórico atual.
 
 ## Estrutura
 
@@ -73,7 +73,7 @@ npm ci
 npm start
 ```
 
-O servidor React encaminha `/api` para `localhost:8080`. Em Docker, o Nginx encaminha para o serviço backend. Opcionalmente configure `REACT_APP_API_URL` no ambiente do build. O backend aceita `DB_URL`, `DB_USER` e `DB_PASSWORD` para configuração do banco.
+O servidor React usa `src/setupProxy.js` para encaminhar `/api` para `127.0.0.1:8080`. Em Docker, o Nginx encaminha para o serviço backend. Opcionalmente configure `REACT_APP_API_URL` no ambiente do build. O backend aceita `DB_URL`, `DB_USER` e `DB_PASSWORD` para configuração do banco.
 
 ## Testes e build
 
@@ -135,9 +135,9 @@ Entregar:
 - Print real da API criando um livro vinculado a um autor.
 - Print da aba Actions após a execução remota.
 
-AWS não é exigida. Os comandos, arquivos e branches locais estão preparados; prints, revisões e execução remota precisam refletir ações reais.
+AWS não é exigida. As evidências estão em `prints/`; veja `REVISAO-ENTREGA.md` para o resultado da conferência e as pendências. A execução `fix #2` do GitHub Actions aprovou backend, frontend e aceitação em containers. Correções locais posteriores àquela execução precisam ser enviadas e verificadas novamente no CI.
 
-## Extras (branch feature/extras)
+## Extras incluídos na main
 
 - `GET /api/livros/autor/{autorId}` retorna livros ordenados por título; autor sem livros ou inexistente retorna lista vazia (200).
 - A tela de Livros oferece filtro por autor.
@@ -146,4 +146,9 @@ AWS não é exigida. Os comandos, arquivos e branches locais estão preparados; 
 - `bash scripts/aceitacao.sh` verifica criação, vínculo, filtro e conflito contra uma API já iniciada. Requer curl e Python 3. Remove apenas os registros criados pelo próprio script. Opcional: `API_URL=http://localhost:3000/api bash scripts/aceitacao.sh` para verificar o proxy.
 - O job extra `deploy` no GitHub Actions constrói os containers e executa a aceitação no runner descartável; não publica na AWS.
 
-A execução local de containers não foi realizada. Inicie o Docker e os serviços manualmente quando desejar fazer a aceitação. Os extras também foram integrados à `main`; as três branches de origem foram preservadas no histórico.
+A execução local de containers não foi realizada. Inicie o Docker e os serviços manualmente quando desejar fazer a aceitação. Os extras estão na `main`; as branches originais não foram preservadas no histórico atual.
+
+## Correções da revisão final
+
+- Datas de nascimento usam JDBC 4.2 (`LocalDateJdbcType`) para manter o tipo SQL DATE e evitar conversão por instante em datas históricas. O teste verifica que `1839-06-21` permanece igual após salvar e consultar.
+- O proxy de desenvolvimento usa `setupProxy.js`, evitando a falha de `allowedHosts` do react-scripts em ambientes sem endereço de rede detectável.

@@ -65,4 +65,9 @@ class ExtrasIntegracaoTest {
   mvc.perform(post("/api/livros").contentType("application/json").content("{\"titulo\":\"Livro\",\"autor\":{}}"))
    .andExpect(status().isBadRequest());
  }
+ @Test void devePreservarDataNascimentoHistorica() throws Exception {
+  long id=criar("autores",Map.of("nome","Machado de Assis", "dataNascimento","1839-06-21"));
+  mvc.perform(get("/api/autores/"+id)).andExpect(status().isOk())
+   .andExpect(jsonPath("$.dataNascimento").value("1839-06-21"));
+ }
 }

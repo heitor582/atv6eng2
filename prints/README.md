@@ -16,3 +16,7 @@ As imagens de testes e API exibem os logs em páginas locais, não emulando um t
 O lockfile foi corrigido com TypeScript 4.9.5 explícito. A instalação limpa `npm ci`, o comando Jest com `--passWithNoTests` (sem suíte frontend) e o build React passaram localmente após a correção. A correção foi enviada e a execução remota passou: https://github.com/heitor582/atv6eng2/actions/runs/44512325632 . Os jobs de backend, frontend e aceitação em containers foram aprovados; esses containers executaram no runner do GitHub, não no computador local.
 
 A justificativa de pair programming e alternância de papéis está no README principal. Nenhum commit ou push foi criado nesta etapa.
+
+## Revisão final de 19/11/2026
+
+Veja `../REVISAO-ENTREGA.md`. `testes-revisao.txt` registra 10 testes passando e `api-revisao.txt` confirma a correção da data histórica. As imagens 01 e 06 ainda são apresentações de logs antigos, não capturas do terminal/ferramenta de API; devem ser substituídas antes da entrega. As imagens 02 e 03 mostram a data anterior à correção. A imagem 07 comprova a execução fix #2, anterior às mudanças da revisão final.
